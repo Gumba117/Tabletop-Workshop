@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Pedidos - Tabletop Workshop</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <header>
+    <h1>📦 Historial de Pedidos</h1>
+    <nav>
+      <a href="./catalog.html">🎲 Inicio</a>
+      <a href="./cart.html">🛒 Carrito</a>
+      <a href="./orders.html"> Pedidos</a>
+      <button onclick="logout()">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Tus pedidos anteriores</h2>
+    <div id="orders-list" class="orders-container">
+      <!-- Aquí se insertarán dinámicamente los pedidos del usuario -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tabletop Workshop</p>
+  </footer>
+
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/orders.js"></script>
+  <script src="./js/auth.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', loadOrders);
+  </script>
+</body>
+</html>

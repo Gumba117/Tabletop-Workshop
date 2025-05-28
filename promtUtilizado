@@ -1,0 +1,122 @@
+Excelente. Ya tengo toda la información necesaria. Me tomaré un momento para integrar todos los elementos y construir un **prompt ultra detallado**, alineado con tus necesidades.
+
+---
+
+## ✅ **PASO 03 al 06: El mejor prompt jamás creado para tu tienda "Tabletop Workshop"**
+
+---
+
+### **🧠 CONTEXTO**
+
+Estás desarrollando una tienda en línea llamada **"Tabletop Workshop"** para la venta de juegos de mesa. Esta aplicación web debe ser construida exclusivamente con **HTML, CSS y JavaScript Vanilla**, sin uso de frameworks ni bibliotecas externas. El backend será gestionado con **Supabase**, incluyendo la base de datos y autenticación de usuarios por correo y contraseña. El pago será simulado a través de una integración con **Stripe**, y la aplicación se desplegará en **GitHub Pages**.
+
+La tienda debe incluir funcionalidades completas desde el inicio: autenticación, visualización de productos, carrito de compras, historial de pedidos, y simulación de compra. Todo el código debe estar claramente separado por responsabilidades y ubicado en múltiples archivos `.html`, `.css` y `.js`. La interfaz debe ser **responsiva y amigable**, aunque no es necesaria una precisión de diseño tipo "pixel-perfect".
+
+---
+
+### **🧑‍🏫 ROL**
+
+Eres un desarrollador senior full-stack con más de 20 años de experiencia construyendo tiendas en línea utilizando tecnologías web puras y sin dependencias. Eres experto en la arquitectura de aplicaciones JavaScript Vanilla, seguridad de datos, uso avanzado de Supabase, y en crear integraciones seguras y simuladas con plataformas como Stripe. Tienes un enfoque claro, didáctico y modular al escribir código, y sabes explicar de forma comprensible cada paso que das.
+
+---
+
+### **🛠 ACCIÓN**
+
+Sigue los siguientes pasos para cumplir con los objetivos:
+
+1. **Estructura del Proyecto**:
+
+   * Genera una estructura inicial de carpetas y archivos necesaria para una tienda modular basada en HTML, CSS y JS.
+   * Incluye archivos separados para lógica de Supabase, lógica del carrito, autenticación, estilos y vistas.
+
+2. **Configuración de Supabase**:
+
+   * Describe detalladamente cómo crear la base de datos en Supabase según el modelo entidad-relación proporcionado.
+   * Indica cómo habilitar la autenticación con email/contraseña.
+   * Explica cómo configurar las políticas RLS (Row-Level Security) para proteger los datos del usuario.
+   * Proporciona instrucciones para enlazar correctamente Supabase con la aplicación web.
+
+3. **HTML y Vistas**:
+
+   * Crea archivos `.html` separados para:
+
+     * **auth.html** (registro e inicio de sesión),
+     * **catalog.html** (visualización de productos),
+     * **cart.html** (carrito de compras),
+     * **checkout.html** (confirmación de compra con Stripe),
+     * **orders.html** (historial de pedidos).
+   * Incluye encabezados y navegación básicos para moverse entre páginas.
+
+4. **CSS (Diseño Responsivo)**:
+
+   * Crea un archivo CSS que proporcione estilos simples pero efectivos para una experiencia de usuario amigable y adaptable.
+
+5. **JavaScript Modular**:
+
+   * Crea scripts independientes en archivos `.js` para:
+
+     * **auth.js** (registro/login/logout con Supabase Auth),
+     * **products.js** (lectura de productos desde la base de datos),
+     * **cart.js** (gestión del carrito de compras con `localStorage`),
+     * **checkout.js** (simulación de compra e integración con Stripe),
+     * **orders.js** (recuperación del historial de pedidos),
+     * **supabaseClient.js** (configuración de Supabase).
+
+6. **Simulación de Pagos**:
+
+   * Implementa una integración básica con Stripe (puede ser un formulario ficticio que simula un pago exitoso).
+
+7. **Persistencia del Pedido**:
+
+   * Una vez completado el “pago”, almacena en Supabase todos los datos del pedido y sus detalles.
+
+8. **Historial de Pedidos**:
+
+   * Recupera y muestra los pedidos anteriores del usuario autenticado desde Supabase.
+
+9. **Despliegue**:
+
+   * Proporciona instrucciones detalladas para subir el proyecto a GitHub y desplegarlo con GitHub Pages, asegurando que los scripts funcionen con rutas relativas.
+
+---
+
+### **📄 FORMATO**
+
+* Código completo separado por archivos (`.html`, `.css`, `.js`) organizado por carpetas.
+* Instrucciones paso a paso en texto plano para cada fase del proceso.
+* Comentarios claros dentro del código para facilitar la comprensión.
+* Instrucciones en formato Markdown, listas numeradas y secciones con encabezados (`##`).
+
+---
+
+### **🎯 PÚBLICO OBJETIVO**
+
+Este prompt está diseñado para **desarrolladores web intermedios** que buscan construir una tienda web funcional y profesional sin frameworks ni herramientas avanzadas. Tienen conocimientos básicos en HTML, CSS y JS, y desean mejorar su capacidad para trabajar con **APIs modernas como Supabase** e integrar soluciones como Stripe. El nivel de lectura es técnico, pero con explicaciones claras y paso a paso.
+
+---
+
+¿Quieres que ejecute este prompt ahora para que comencemos a generar el código y las instrucciones completas para tu tienda "Tabletop Workshop"?
+
+
+//////////
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Tabletop Workshop</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main>
+    <form id="checkout-form">
+  <input type="text" placeholder="Nombre de tarjeta (simulado)" required />
+  <button type="submit">Pagar</button>
+</form>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

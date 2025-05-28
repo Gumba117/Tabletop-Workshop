@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - Tabletop Workshop</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <header>
+    <h1>🛒 Carrito de Compras</h1>
+    <nav>
+      <a href="./catalog.html">🎲 Inicio</a>
+      <a href="./cart.html"> Carrito</a>
+      <a href="./orders.html">📦 Pedidos</a>
+      <button onclick="logout()">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Resumen de tu carrito</h2>
+    <div id="cart-list" class="cart-items">
+      <!-- Productos del carrito se insertarán aquí -->
+    </div>
+
+    <div class="cart-summary">
+      <p id="cart-total">Total: $0.00</p>
+            <p >
+              .
+            </p>
+      <a href="./checkout.html" class="btn">Proceder al pago</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tabletop Workshop</p>
+  </footer>
+
+  <script src="./js/supabaseClient.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/auth.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', displayCart);
+  </script>
+</body>
+</html>

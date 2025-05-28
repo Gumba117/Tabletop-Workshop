@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=./auth.html" />
+  <title>Tabletop Workshop</title>
 </head>
 <body>
-    <img src="./img/CAT.png" alt="CAT">
+    <header>
+    <h1> Inicio </h1>
+    <nav>
+      <a href="./catalog.html">🎲 Inicio</a>
+      <a href="./cart.html">🛒 Carrito</a>
+      <a href="./orders.html">📦 Pedidos</a>
+      <button onclick="logout()">Cerrar sesión</button>
+    </nav>
+  </header>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="./js/supabaseClient.js"></script>
