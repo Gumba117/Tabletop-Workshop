@@ -31,9 +31,9 @@ async function logout() {
 // ==============================
 
 // Referencias a los elementos del formulario
-const signupForm = document.getElementById('signup-form');
-const loginForm = document.getElementById('login-form');
-const logoutBtn = document.getElementById('logout-btn');
+const authForm = document.getElementById('auth-form');
+const loginBtn = document.getElementById('login-btn');
+const signupBtn = document.getElementById('signup-btn');
 const authMessage = document.getElementById('auth-message');
 
 // Mostrar mensaje de error o éxito
@@ -44,14 +44,29 @@ function showMessage(message, isError = true) {
   }
 }
 
-// ------------------------------
-// Registro de usuario
-// ------------------------------
-if (signupForm) {
-  signupForm.addEventListener('submit', async (e) => {
+// Login al enviar el formulario (por defecto)
+if (authForm && loginBtn) {
+  authForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = signupForm.email.value;
-    const password = signupForm.password.value;
+    const email = authForm.email.value;
+    const password = authForm.password.value;
+
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      showMessage(`Error al iniciar sesión: ${error.message}`);
+    } else {
+      window.location.href = 'catalog.html';
+    }
+  });
+}
+
+// Registro al hacer click en el botón de registro
+if (authForm && signupBtn) {
+  signupBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = authForm.email.value;
+    const password = authForm.password.value;
 
     const { error } = await supabase.auth.signUp({ email, password });
 
@@ -59,27 +74,7 @@ if (signupForm) {
       showMessage(`Error al registrarse: ${error.message}`);
     } else {
       showMessage('Registro exitoso. Revisa tu correo para confirmar.', false);
-      signupForm.reset();
-    }
-  });
-}
-
-// ------------------------------
-// Inicio de sesión
-// ------------------------------
-if (loginForm) {
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = loginForm.email.value;
-    const password = loginForm.password.value;
-
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-
-    if (error) {
-      showMessage(`Error al iniciar sesión: ${error.message}`);
-    } else {
-      // Redirige al catálogo después de login
-      window.location.href = 'catalog.html';
+      authForm.reset();
     }
   });
 }
