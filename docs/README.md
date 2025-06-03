@@ -1,1 +1,0 @@
-https://gumba117.github.io/Tabletop-Workshop/auth.html

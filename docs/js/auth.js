@@ -55,12 +55,13 @@ if (authForm && signupBtn) {
 // ------------------------------
 // Cierre de sesión
 // ------------------------------
+/*
 if (logoutBtn) {
   logoutBtn.addEventListener('click', async () => {
     await supabase.auth.signOut();
     window.location.href = 'auth.html';
   });
-}
+}*/
 
 // ------------------------------
 // Comprobación de sesión activa
