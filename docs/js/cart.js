@@ -50,7 +50,7 @@ function removeFromCart(productId) {
 // Renderizar el carrito (en cart.html)
 // ------------------------------
 async function renderCart() {
-  const cartContainer = document.getElementById('cart-container');
+  const cartContainer = document.getElementById('cart-list');
   const totalContainer = document.getElementById('cart-total');
 
   const cart = getCart();
