@@ -88,3 +88,8 @@ async function renderCart() {
     }
   });
 }
+
+// Mostrar el carrito al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  renderCart();
+});
