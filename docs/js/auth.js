@@ -8,6 +8,7 @@ const authForm = document.getElementById('auth-form');
 const loginBtn = document.getElementById('login-btn');
 const signupBtn = document.getElementById('signup-btn');
 const authMessage = document.getElementById('auth-message');
+const logoutBtn = document.getElementById( 'logout-btn');
 
 // Mostrar mensaje de error o éxito
 function showMessage(message, isError = true) {
@@ -55,13 +56,13 @@ if (authForm && signupBtn) {
 // ------------------------------
 // Cierre de sesión
 // ------------------------------
-/*
+
 if (logoutBtn) {
   logoutBtn.addEventListener('click', async () => {
     await supabase.auth.signOut();
     window.location.href = 'auth.html';
   });
-}*/
+}
 
 // ------------------------------
 // Comprobación de sesión activa
