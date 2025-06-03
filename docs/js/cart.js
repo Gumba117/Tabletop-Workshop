@@ -62,7 +62,13 @@ async function renderCart() {
   }
 
   let total = 0;
-  cartContainer.innerHTML = '';
+  try {
+    cartContainer.innerHTML = '';
+  }
+  catch (error) {
+    console.error('Error al limpiar el contenedor:', error);
+  }
+  //cartContainer.innerHTML = '';
 
   cart.forEach(item => {
     total += item.price * item.quantity;

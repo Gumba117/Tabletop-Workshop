@@ -21,6 +21,13 @@
   </header>
 
   <main>
+
+    <h2>Resumen de tu compra</h2>
+    <div id="checkout-summary" class="order-summary">
+      <!-- Resumen de la compra se insertará aquí -->
+      <!--<p id="order-total">Total: $0.00</p>-->
+    </div>
+
     <h2>Simulación de pago</h2>
 
     <form id="checkout-form" class="checkout-form">
@@ -36,11 +43,11 @@
       <label for="cvv">CVV:</label>
       <input type="text" id="cvv" name="cvv" required />
 
-      <button type="submit" class="btn">Simular pago</button>
+      <button type="submit" class="btn">Pagar</button>
     </form>
 
     <div class="info-box">
-      <p>Este formulario simula un pago y no está conectado a Stripe real.</p>
+      <p>Este formulario simula un pago y no está conectado a un sistema de pago real.</p>
     </div>
   </main>
 

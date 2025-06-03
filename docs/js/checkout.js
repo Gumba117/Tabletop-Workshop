@@ -19,7 +19,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Mostrar resumen de compra
   let total = 0;
-  summaryContainer.innerHTML = '';
+  try {
+
+    summaryContainer.innerHTML = '';
+  }
+  catch (error) {
+    console.error('Error al limpiar el contenedor:', error);
+  }
 
   cart.forEach(item => {
     total += item.price * item.quantity;
