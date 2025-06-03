@@ -1,31 +1,4 @@
-// js/auth.js
-/*
-const loginForm = document.getElementById('login-form');
-const signupForm = document.getElementById('signup-form'); // si lo usas
 
-// Iniciar sesión
-if (loginForm) {
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-
-    if (error) {
-      alert('Error al iniciar sesión: ' + error.message);
-    } else {
-      window.location.href = 'catalog.html';
-    }
-  });
-}
-
-// Cerrar sesión (puedes llamar esto desde un botón)
-async function logout() {
-  await supabase.auth.signOut();
-  window.location.href = 'auth.html';
-}
-  */
 // ==============================
 // Autenticación con Supabase
 // ==============================

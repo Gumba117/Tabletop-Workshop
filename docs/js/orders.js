@@ -1,34 +1,4 @@
-// js/orders.js
-/*
-window.addEventListener('DOMContentLoaded', async () => {
-  const user = (await supabase.auth.getUser()).data.user;
-  if (!user) {
-    alert('Debes iniciar sesión.');
-    window.location.href = 'auth.html';
-    return;
-  }
 
-  const { data: orders } = await supabase
-    .from('orders')
-    .select('id, created_at, total')
-    .eq('user_id', user.id)
-    .order('created_at', { ascending: false });
-
-  const container = document.getElementById('orders-list');
-  container.innerHTML = '';
-
-  orders.forEach(order => {
-    const el = document.createElement('div');
-    el.innerHTML = `
-      <p><strong>Pedido #${order.id}</strong></p>
-      <p>Fecha: ${new Date(order.created_at).toLocaleString()}</p>
-      <p>Total: $${order.total.toFixed(2)}</p>
-      <hr />
-    `;
-    container.appendChild(el);
-  });
-});
-*/
 
 // ==============================
 // Historial de pedidos del usuario

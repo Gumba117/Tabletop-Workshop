@@ -100,23 +100,3 @@ Este prompt está diseñado para **desarrolladores web intermedios** que buscan 
 
 //////////
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Login - Tabletop Workshop</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <main>
-    <form id="checkout-form">
-  <input type="text" placeholder="Nombre de tarjeta (simulado)" required />
-  <button type="submit">Pagar</button>
-</form>
-
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="js/supabaseClient.js"></script>
-  <script src="js/auth.js"></script>
-</body>
-</html>

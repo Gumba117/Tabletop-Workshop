@@ -1,31 +1,4 @@
-// js/products.js
-/*
-async function loadProducts() {
-  const { data: products, error } = await supabase.from('products').select('*');
 
-  if (error) {
-    console.error('Error cargando productos:', error);
-    return;
-  }
-
-  const container = document.getElementById('product-list');
-  container.innerHTML = '';
-
-  products.forEach(product => {
-    const card = document.createElement('div');
-    card.className = 'product-card';
-    card.innerHTML = `
-      <img src="${product.image_url}" alt="${product.name}" />
-      <h3>${product.name}</h3>
-      <p>$${product.price}</p>
-      <button onclick="addToCart('${product.id}')">Agregar al carrito</button>
-    `;
-    container.appendChild(card);
-  });
-}
-
-window.addEventListener('DOMContentLoaded', loadProducts);
-*/
 // ==============================
 // Carga de productos desde Supabase
 // ==============================
