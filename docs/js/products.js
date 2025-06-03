@@ -4,11 +4,12 @@
 // ==============================
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const productsContainer = document.getElementById('products-container');
+  const productsContainer = document.getElementById('product-list');
 
   // Verificamos sesión del usuario
   const user = await checkSession(true); // Redirige si no está logueado
 
+  const contenedor = document.getElementById('productos-container');
   // Cargar productos
   const { data: products, error } = await supabase.from('products').select('*');
 
@@ -16,6 +17,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     productsContainer.innerHTML = `<p>Error al cargar productos: ${error.message}</p>`;
     return;
   }
+
+  // Limpiar contenedor antes de renderizar
+  productsContainer.innerHTML = '';
+  
+  // Si no hay productos, mostrar mensaje
+  if (products.length === 0) {
+    productsContainer.innerHTML = '<p>No hay productos disponibles.</p>';
+    return;
+  }
+
 
   // Renderizar productos
   products.forEach(product => {
